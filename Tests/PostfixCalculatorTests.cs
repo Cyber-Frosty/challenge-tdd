@@ -95,10 +95,10 @@ namespace Tests
         [TestCase("2i 3 *", ExpectedResult = "6i")]
         [TestCase("2i 3i *", ExpectedResult = "-6")]
 
-        //[TestCase("3 7i + 5 4i + +", ExpectedResult = "8+11i")]
-        //[TestCase("3 7i + 5 4i + *", ExpectedResult = "-13+47i")]
-        //[TestCase("7i 3 + 4i 5 + *", ExpectedResult = "-13+47i")]
-        //public string T13_CanCalculateComplexNumbers(string postfixExpression)
-        //    => PostfixCalculator.Calculate(postfixExpression);
+        [TestCase("3 7i + 5 4i + +", ExpectedResult = "8+11i")]
+        [TestCase("3 7i + 5 4i + *", ExpectedResult = "-13+47i")]
+        [TestCase("7i 3 + 4i 5 + *", ExpectedResult = "-13+47i")]
+        public string T13_CanCalculateComplexNumbers(string postfixExpression)
+            => PostfixCalculator.Calculate(postfixExpression);
     }
 }
